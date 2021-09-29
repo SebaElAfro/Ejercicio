@@ -1,0 +1,121 @@
+¿QUE ES GIT? ->SISTEMA DE CONTROL DE VERSIONES DISTRIBUIDO
+
+TRABAJAMOS DESDE LA CONSOLA :D
+
+¿COMO CREAR UN REPO?
+ GIT INIT(COMANDO)
+
+¿QUE ES UN BRANCH?
+ES UNA RAMA EN MI PROYECTO
+GENERO LINEAS PARALELAS DE MI RAMA PRINCIPAL->DIVIDIR TAREAS
+PARA TRABAJAR EN OTRA COSA SIN AFECTAR EN LINEA DIRECTA A MI RAMA PRINCIPAL
+
+TODO BRANCH EN ALGUN MOMENTO DEBE VOLVER A SU RAMA PRINCIPAL
+MERGE ->NORMAL QUE GENERE CONFLICTOS...ENTONCES?UNA PUTEADA Y NO TE ANGUSTIES AL CUETE
+
+FORMA DE TRABAJO:
+TENGO UN UNICO PROYECTO Y VOY ACTUALIZANDO LAS MODIFICACIONES(DIFERENTES VERSIONES)
+(MEDIANTE EL SISTEMA DE CONTROL DE VERSIONES)
+EXISTE UN HISTORIAL DE LAS MODIFICACIONES QUE HAGO A MI PROYECTO
+
+PARA DELIMITAR CADA PUNTO DE CONTROL->UTILIZAMOS COMMMIT
+
+PRIMER COMMIT
+SEGUNDO COMMIT
+TERCER COMMIT
+..
+.
+N COMMIT
+
+CADA VEZ QUE ESTABLEZCO UN COMMIT->ESTABLEZCO UN PUNTO DE CONTROL
+PUEDO IR HACIA VERSIONES ANTERIORES
+
+CADA COMMIT DEBE SER UN CAMBIO IMPORTANTE 
+
+REPO? ES UN LUGAR DONDE PUEDO DEJAR CIERTA INFORMACION
+
+
+
+3 ESTADIOS AL APLICAR DETERMINADOS CAMBIOS
+
+WORKING DIRECTO->NUESTRO PROYECTO
+P/AGREGAR MODIF TENGO QUE IR A
+STAGING AREA-> AREA DE PREPARACION
+Y GIT ADD
+CON GIT COMMIT LO DEJO EN MI REPO
+REPOSITORY->
+
+
+
+
+GIT ADD->AGREGO MODIFICACIONES
+GIT COMMIT->CONFIRMAMOS LO QUE TIRAMOS CON GIT ADD
+
+
+TIPOS DE REPOSITORIOS
+
+REPOSITORIO REMOTO->COMO LA NUBE,ES DONDE SINCRONIZAMOS 
+LOS CAMBIOS Y LOS PUEDEN VER MIS COMPIS DE GRUPO
+
+ejemplos de plataformas utilizadas:
+GITLAB
+GITHUB<-USAMOS ESTE
+BITBUCKET
+
+REPOSITORIO LOCAL->EL QUE TENGO EN MI PC
+
+comandos p/configurar en bash
+
+git config --global user.name "Cristian Solís"
+git config --global user.email "cristian.solis.egg@gmail.com"
+
+p/saber si configure bien: 
+git config --global --list
+
+
+p/renombrar la rama por defecto
+git config --global init.defaultBranch main
+
+
+p/crear repo local
+me ubico donde esta mi proyecto->click derecho sobre la carpeta git bash here
+
+PARA DECIR QUE MI PROYECTO ES UN REPOSITORIO
+-> GIT INIT //INICIALIZA EL REPOSITORIO
+en las ultimas lineas debe saltar los datos que ingrese
+git branch -M main
+git config --global init.defaultBranch main
+
+
+REPOSITORIO LOCAL-> EN NUESTRA COMPU
+p/pasar al area de preparacion 
+git add .
+
+p/saber mi estado
+git status
+
+p/hacer un commit
+git commit -m "msj que quiero agregar"
+
+p/token
+voy a git->desde una pestaña del buscador
+perfil->settings->developer setting->personal access tokens->generate new token
+->en note (lo que quieras)->en expiration: no expiration-> en select scopes->tildamos repo->generate token
+
+copiamos lo que nos da
+
+
+volvemos a la consola p/vincular
+git remote add origin https://TOKEN@github.com/USUARIO-QUE-CREO-EL-REPOSITORIO/NOMBRE-DEL-PROYECTO.git
+git remote add origin https://xxxxxxxxxxxxxxxxxxxxxxxxxx(xx..representa mi token)@github.com/DianaGonzalez21/EjemploEgg.git
+y lo tiro a la consola
+
+luego
+git remote -v
+git push main
+git status
+
+
+PUSH
+
+PULL
